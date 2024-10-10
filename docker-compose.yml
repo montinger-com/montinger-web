@@ -1,0 +1,13 @@
+services:
+  montinger-web-production:
+    container_name: montinger-web-${NODE_ENV}
+    restart: always
+    build:
+      context: .
+      args:
+        CONFIGURATION: production
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:80"
+    profiles:
+      - production

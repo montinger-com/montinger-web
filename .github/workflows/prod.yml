@@ -1,0 +1,42 @@
+name: Deploy to production
+
+on:
+  push:
+    branches:
+      - release/prod
+
+jobs:
+  deploy:
+    name: Deploy
+    environment: production
+    runs-on: sudocod-web01
+    env:
+      NODE_ENV: ${{ vars.NODE_ENV }}
+      PORT: ${{ vars.PORT }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup environment file
+        run: |
+          cat << EOF > src/environments/environment.development.ts
+          export const environment = {
+            production: true,
+
+            API_BASE: '${{ vars.API_BASE }}',
+
+            cache: {
+              maxSize: ${{ vars.CACHE_MAX_SIZE }},
+              maxAge: '${{ vars.CACHE_MAX_AGE }}',
+            },
+          };
+          EOF
+      
+      - name: Teriminating running containers
+        run: |
+          docker-compose --profile production down
+
+      - name: Deploy
+        run: |
+          docker-compose --profile production up --build -d

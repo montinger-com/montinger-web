@@ -1,0 +1,90 @@
+<div class="top-container">
+  <div class="circle-container">
+    <svg class="w-[100vw]" viewBox="0 0 1728 1117" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-3935" y="-3161" width="7022"
+        height="5549">
+        <circle cx="-1160.5" cy="-386.5" r="2774.5" fill="#D9D9D9" />
+        <circle cx="2264.5" cy="971.5" r="822.5" fill="#D9D9D9" />
+      </mask>
+      <g mask="url(#mask0_0_1)">
+        <rect width="1728" height="1117" fill="url(#paint0_linear_0_1)" />
+      </g>
+      <circle cx="-143" cy="215" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="-265" cy="433" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="587" cy="-121" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="1386" cy="870" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="405" cy="881" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="1274" cy="283" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="1138" cy="-123" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="405" cy="1259" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="1551" cy="1331" r="569" fill="white" fill-opacity="0.13" />
+      <circle cx="2011" cy="446" r="569" fill="white" fill-opacity="0.13" />
+      <defs>
+        <linearGradient id="paint0_linear_0_1" x1="1728" y1="0" x2="1.87198e-05" y2="1117"
+          gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FFC700" />
+          <stop offset="1" stop-color="#FF003D" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="main-container">
+    <div class="body-container">
+      <img class="logo" src="assets/images/logo.svg" alt="logo">
+    </div>
+    <div class="login-container relative">
+      <div class="login" [formGroup]="loginForm">
+        <div class="title">{{ "login.login" | translate | uppercase }}</div>
+
+        <div class="input mb-6">
+          <div class="icon-container">
+            <svg viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.80001 0.399994C3.13626 0.399994 2.60001 0.936244 2.60001 1.59999V8.79999H6.20001V7.59999C6.20001 6.27624 7.27626 5.19999 8.60001 5.19999H17V1.59999C17 0.936244 16.4638 0.399994 15.8 0.399994H3.80001ZM8.60001 6.39999C7.93626 6.39999 7.40001 6.93624 7.40001 7.59999V8.79999H11C12.3238 8.79999 13.4 9.87624 13.4 11.2V16H20.6C21.2638 16 21.8 15.4637 21.8 14.8V7.59999C21.8 6.93624 21.2638 6.39999 20.6 6.39999H8.60001ZM17.6 8.79999H18.8C19.13 8.79999 19.4 9.06999 19.4 9.39999V10.6C19.4 10.93 19.13 11.2 18.8 11.2H17.6C17.27 11.2 17 10.93 17 10.6V9.39999C17 9.06999 17.27 8.79999 17.6 8.79999ZM1.40001 9.99999C0.736262 9.99999 0.200012 10.5362 0.200012 11.2V11.6875L6.01626 15.9962C6.06876 16.0337 6.13251 16.0562 6.20001 16.0562C6.26751 16.0562 6.33126 16.0337 6.38376 15.9962L12.2 11.6875V11.2C12.2 10.5362 11.6638 9.99999 11 9.99999H1.40001ZM12.2 13.18L7.10001 16.96C6.84126 17.1512 6.52626 17.2562 6.20001 17.2562C5.87376 17.2562 5.56251 17.1512 5.30001 16.96L0.200012 13.18V18.4C0.200012 19.0637 0.736262 19.6 1.40001 19.6H11C11.6638 19.6 12.2 19.0637 12.2 18.4V13.18Z" />
+            </svg>
+          </div>
+          <input type="email" [placeholder]="'common.email' | translate" formControlName="username">
+        </div>
+
+        <div class="input mb-12">
+          <div class="icon-container">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.25 12C2.25 6.61406 6.61406 2.25 12 2.25C14.9578 2.25 17.6062 3.56719 19.3969 5.64844C19.8 6.12187 20.5125 6.17344 20.9813 5.77031C21.45 5.36719 21.5063 4.65469 21.1031 4.18594C18.9047 1.62188 15.6422 0 12 0C5.37188 0 0 5.37188 0 12V13.875C0 14.4984 0.501562 15 1.125 15C1.74844 15 2.25 14.4984 2.25 13.875V12ZM23.7422 9.52031C23.6156 8.91094 23.0156 8.52188 22.4109 8.65313C21.8062 8.78438 21.4125 9.37969 21.5438 9.98438C21.6797 10.6359 21.7547 11.3109 21.7547 12.0047V13.8797C21.7547 14.5031 22.2563 15.0047 22.8797 15.0047C23.5031 15.0047 24.0047 14.5031 24.0047 13.8797V12C24.0047 11.1516 23.9156 10.3219 23.7469 9.52031H23.7422ZM12 3.75C11.1094 3.75 10.2469 3.89062 9.44531 4.15312C8.73281 4.3875 8.56875 5.26406 9.05625 5.83594C9.38906 6.225 9.9375 6.34219 10.4344 6.20625C10.9313 6.07031 11.4563 6 12 6C15.3141 6 18 8.68594 18 12V13.1672C18 14.3484 17.9297 15.525 17.7938 16.6969C17.7141 17.3813 18.2344 18 18.9281 18C19.4812 18 19.9547 17.5969 20.0203 17.0484C20.175 15.7641 20.2547 14.4703 20.2547 13.1719V12C20.2547 7.44375 16.5609 3.75 12.0047 3.75H12ZM7.06406 6.97031C6.6375 6.47344 5.87813 6.43594 5.475 6.95156C4.39219 8.34375 3.75 10.0969 3.75 12V13.1672C3.75 14.3016 3.62812 15.4359 3.38437 16.5375C3.225 17.2687 3.75469 18 4.50469 18C4.99687 18 5.4375 17.6719 5.54531 17.1891C5.84531 15.8719 6 14.5266 6 13.1672V12C6 10.725 6.39844 9.54375 7.07344 8.57344C7.41094 8.08594 7.44844 7.42031 7.06406 6.97031ZM12 7.5C9.51562 7.5 7.5 9.51562 7.5 12V13.1672C7.5 14.85 7.28437 16.5187 6.85312 18.1406C6.675 18.8109 7.16719 19.5 7.86094 19.5C8.30625 19.5 8.7 19.2094 8.81719 18.7781C9.30938 16.95 9.5625 15.0656 9.5625 13.1672V12C9.5625 10.6547 10.6547 9.5625 12 9.5625C13.3453 9.5625 14.4375 10.6547 14.4375 12V13.1672C14.4375 14.8687 14.2734 16.5609 13.95 18.225C13.8234 18.8766 14.3109 19.5 14.9719 19.5C15.45 19.5 15.8625 19.1719 15.9562 18.7031C16.3172 16.8844 16.5 15.0328 16.5 13.1672V12C16.5 9.51562 14.4844 7.5 12 7.5ZM13.125 12C13.125 11.3766 12.6234 10.875 12 10.875C11.3766 10.875 10.875 11.3766 10.875 12V13.1672C10.875 15.975 10.3594 18.7594 9.35156 21.3797L9.075 22.0969C8.85 22.6781 9.14062 23.3297 9.72187 23.55C10.3031 23.7703 10.9547 23.4844 11.175 22.9031L11.4516 22.1859C12.5578 19.3078 13.125 16.2516 13.125 13.1672V12Z" />
+            </svg>
+
+          </div>
+          <input type="password" [placeholder]="'common.password' | translate" formControlName="password">
+        </div>
+
+        <div class="flex justify-end">
+          <button class="btn primary" [disabled]="$$loading()" (click)="loginWithUsernamePassword()">
+            {{ "login.login" | translate | uppercase }}
+          </button>
+        </div>
+      </div>
+      <svg class="w-[20vw]" viewBox="0 0 538 671" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_1_22)">
+          <path
+            d="M500 4H38C21.4315 4 8 17.4315 8 34V446.033C8 458.341 15.517 469.4 26.9609 473.928L488.961 656.759C508.652 664.552 530 650.041 530 628.864V34C530 17.4315 516.569 4 500 4Z"
+            fill="white" />
+        </g>
+        <defs>
+          <filter id="filter0_d_1_22" x="0" y="0" width="538" height="670.893" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha" />
+            <feOffset dy="4" />
+            <feGaussianBlur stdDeviation="4" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_22" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_22" result="shape" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</div>

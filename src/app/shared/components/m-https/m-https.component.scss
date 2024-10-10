@@ -1,0 +1,57 @@
+.card {
+  @apply p-4;
+
+  .title-container {
+    @apply flex gap-5 items-center;
+    @apply text-[#414141] dark:text-white;
+
+    fa-icon {
+      @apply text-4xl;
+    }
+
+    .title {
+      @apply text-lg font-bold;
+    }
+
+    .sub-title {
+      @apply text-[#414141] dark:text-white;
+      @apply text-xs text-opacity-60 dark:text-opacity-40;
+      @apply -mt-1;
+    }
+  }
+
+  .content-container {
+    @apply flex gap-8;
+    @apply pt-5;
+    @apply text-[#414141] dark:text-white text-sm;
+
+    .item {
+      .title {
+        @apply text-xs;
+        @apply flex justify-between;
+
+        fa-icon {
+          @apply text-[0.5rem];
+        }
+      }
+
+      .values {
+        @apply flex gap-3;
+
+        .value-container {
+          @apply flex flex-col items-center;
+
+          .value {
+            @apply font-bold text-2xl;
+          }
+
+          .sub-value {
+            @apply text-[#414141] dark:text-white;
+            @apply text-xs text-opacity-60 dark:text-opacity-40;
+            @apply -mt-1;
+          }
+        }
+      }
+    }
+  }
+}

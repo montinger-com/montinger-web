@@ -1,0 +1,7 @@
+.m-ar-progress {
+  @apply flex justify-between mt-5 h-10 items-end;
+
+  .progress-line {
+    @apply w-1.5 rounded;
+  }
+}

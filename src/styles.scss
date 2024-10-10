@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+@import "ngx-toastr/toastr";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// INPUTS -----------------------------------------------------
+.input {
+  @apply relative;
+
+  .icon-container {
+    @apply absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none;
+
+    svg {
+      @apply w-5 h-5;
+      @apply fill-gray-900;
+    }
+  }
+
+  input {
+    @apply bg-white border-b-2 border-gray-300 outline-none text-gray-900 text-sm focus:ring-m-orange-500 focus:border-m-orange-500 block w-full ps-12 p-2.5;
+  }
+}
+
+// BUTTONS ----------------------------------------------------
+
+.btn {
+  &.primary {
+    @apply bg-m-orange-500 text-white font-semibold text-sm pb-2.5 pt-3 px-10 rounded-md hover:bg-m-orange-600;
+  }
+}
+
+// Card -------------------------------------------------------
+.card {
+  @apply bg-white bg-opacity-80 rounded shadow border-2 border-white;
+  @apply dark:bg-black dark:bg-opacity-40 border-black border-opacity-10;
+}

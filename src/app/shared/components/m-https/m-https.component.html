@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="title-container">
+    @if (favicon) {
+    <img [src]="favicon" alt="icon" />
+    }
+    @else {
+    <fa-icon [icon]="faGlobe"></fa-icon>
+    }
+    <div>
+      <div class="title">{{monitor.name}}</div>
+      <div class="sub-title">{{monitor.url}}</div>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="item">
+      <div class="title">Uptime <fa-icon [icon]="faCircle"></fa-icon></div>
+      <div class="values">
+        <div class="value-container">
+          <div class="value">100%</div>
+          <div class="sub-value">24h</div>
+        </div>
+
+        <div class="value-container">
+          <div class="value">100%</div>
+          <div class="sub-value">30day</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">Response</div>
+      <div class="values">
+        <div class="value-container">
+          <div class="value">100ms</div>
+          <div class="sub-value">Latest</div>
+        </div>
+
+        <div class="value-container">
+          <div class="value">200ms</div>
+          <div class="sub-value">24h</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">SSL Exp</div>
+      <div class="values">
+        <div class="value-container">
+          <div class="value">221</div>
+          <div class="sub-value">Days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="status-container">
+    <!-- <app-m-ar-progress [history_data]="monitor.history_data ?? []"></app-m-ar-progress> -->
+  </div>
+</div>

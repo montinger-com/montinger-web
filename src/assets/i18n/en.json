@@ -1,0 +1,10 @@
+{
+  "common": {
+    "email": "Email",
+    "password": "Password"
+  },
+  "login": {
+    "login": "Login",
+    "correct_errors": "The login information you provided are invalid. Please try again after correcting them."
+  }
+}

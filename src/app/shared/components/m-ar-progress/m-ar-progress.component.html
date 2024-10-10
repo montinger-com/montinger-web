@@ -1,0 +1,11 @@
+<div class="m-ar-progress">
+  @if (!$$progress().length) {
+  <div class="progress-line"></div>
+  }
+
+  @for (item of $$progress(); track $index) {
+  <div class="progress-line" [class.bg-gray-200]="item.status === 1" [class.dark:bg-black]="item.status === 1"
+    [class.dark:bg-opacity-40]="item.status === 1" [class.bg-green-500]="item.status === 2"
+    [class.bg-red-500]="item.status === 3" [style]="{height: item.height + '%'}"></div>
+  }
+</div>

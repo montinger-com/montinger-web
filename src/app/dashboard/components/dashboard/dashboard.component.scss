@@ -1,0 +1,5 @@
+.dashboard {
+  @apply p-5;
+  @apply flex gap-5 flex-wrap	;
+  @apply max-h-[100vh] overflow-y-auto;
+}

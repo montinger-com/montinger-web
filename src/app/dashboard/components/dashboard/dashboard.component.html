@@ -1,0 +1,10 @@
+<section class="dashboard">
+  @for (monitor of $$monitors(); track $index) {
+    @if(monitor.type === 'https'){
+      <app-m-https [monitor]="monitor"></app-m-https>
+    }
+    @else if (monitor.type === 'server') {
+      <app-m-server [monitor]="monitor"></app-m-server>
+    }
+  }
+</section>

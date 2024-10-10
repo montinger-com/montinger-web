@@ -33,6 +33,11 @@ jobs:
           };
           EOF
       
+      - name: Test
+        run: |
+          pwd
+          ls -la
+      
       - name: Teriminating running containers
         run: |
           docker-compose --profile production down

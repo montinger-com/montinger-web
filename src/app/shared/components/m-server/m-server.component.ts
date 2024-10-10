@@ -72,7 +72,8 @@ export class MServerComponent {
         axisLabel: {
           color: 'inherit',
           distance: 17,
-          fontSize: 0
+          fontSize: 5,
+          show: false
         },
         detail: {
           valueAnimation: true,

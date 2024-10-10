@@ -23,4 +23,4 @@ FROM nginx:stable-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=build-step /app/dist/material-gatepass-ui/browser /usr/share/nginx/html
+COPY --from=build-step /app/dist/montinger-ui/browser /usr/share/nginx/html

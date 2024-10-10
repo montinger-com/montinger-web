@@ -20,7 +20,7 @@ jobs:
 
       - name: Setup environment file
         run: |
-          cat << EOF > src/environments/environment.development.ts
+          cat << EOF > src/environments/environment.${{ vars.NODE_ENV }}.ts
           export const environment = {
             production: true,
 
@@ -32,11 +32,6 @@ jobs:
             },
           };
           EOF
-      
-      - name: Test
-        run: |
-          pwd
-          ls -la
       
       - name: Teriminating running containers
         run: |

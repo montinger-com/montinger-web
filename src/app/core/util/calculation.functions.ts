@@ -19,3 +19,29 @@ export const getNearestSize = (bytes: number): string => {
   }
   return `${Math.round(bytes)} ${units[i]}`
 }
+
+export const formatDuration = (seconds: number): string => {
+  const years = Math.floor(seconds / 31536000)  // 31536000 seconds in a year
+  const days = Math.floor((seconds % 31536000) / 86400)  // 86400 seconds in a day
+  const hours = Math.floor((seconds % 86400) / 3600)  // 3600 seconds in an hour
+  const minutes = Math.floor((seconds % 3600) / 60)  // 60 seconds in a minute
+
+  const parts: string[] = []
+  if (years) {
+    parts.push(`${years} year${years > 1 ? 's' : ''}`)
+  }
+
+  if (days) {
+    parts.push(`${days} day${days > 1 ? 's' : ''}`)
+  }
+
+  if (hours) {
+    parts.push(`${hours} hour${hours > 1 ? 's' : ''}`)
+  }
+  
+  if (minutes) {
+    parts.push(`${minutes} minute${minutes > 1 ? 's' : ''}`)
+  }
+
+  return parts.join(', ')
+}

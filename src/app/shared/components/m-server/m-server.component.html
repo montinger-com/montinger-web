@@ -1,7 +1,6 @@
 <div class="card" [class.error]="$$isError()">
   <div class="title-container">
-    <!-- <fa-icon [icon]="faServer"></fa-icon> -->
-     <ng-icon [svg]="getPlatformIcon(monitor.last_data?.os?.platform ?? '', monitor.last_data?.os?.type ?? '')" />
+    <ng-icon [svg]="$$platformIcon()" />
 
     <div>
       <div class="title">{{monitor.name}} </div>
@@ -22,22 +21,34 @@
     <div class="item">
       <div class="title">Memory <div class="sub-value">{{ monitor.last_data_on | date:'short' }}</div>
       </div>
-      <div class="values"
-        [class.text-orange-500]="(monitor.last_data?.memory?.used_percent ?? 0) > 60 && (monitor.last_data?.memory?.used_percent ?? 0) < 90"
-        [class.text-red-500]="(monitor.last_data?.memory?.used_percent ?? 0) > 90">
+      <div class="values">
         @if (monitor) {
         <div echarts [options]="gaugeChartOption" (chartInit)="onMemChartInit($event)" class="cpu-chart"></div>
         }
 
         <div class="value-container">
           <div class="value">
-            {{getNearestSize(monitor.last_data?.memory?.used ?? 0)}}/{{getNearestSize(monitor.last_data?.memory?.total
-            ?? 0)}}
+            <span class="used-memory">{{$$usedMemory()}}</span>/<span class="total-memory">{{$$totalMemory()}}</span>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="uptime">
+    <div class="value">Uptime</div>
+    <div class="sub-value">{{$$uptime()}}</div>
+  </div>
+
+  <div class="os">
+    <div class="value">OS</div>
+    <div class="sub-value">{{$$os()}}</div>
+  </div>
+
+  <div class="kernel">
+    <div class="value">Kernel</div>
+    <div class="sub-value">{{$$kernel()}}</div>
+  </div>
+
   <div class="status-container">
     <!-- <app-m-ar-progress [history_data]="monitor.history_data ?? []"></app-m-ar-progress> -->
   </div>
